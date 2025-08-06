@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pulse – Animated Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ff4e50, #f9d423);
+      color: #fff;
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      text-align: center;
+      padding: 4rem 1rem;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      animation: pulse 2s infinite;
+    }
+
+    header p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      opacity: 0.85;
+    }
+
+    section {
+      flex: 1;
+      padding: 3rem 2rem;
+      background: rgba(255, 255, 255, 0.1);
+      margin: 2rem auto;
+      width: 80%;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      animation: fadeInUp 1.5s ease-out;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    /* Animations */
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes fadeInDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      section {
+        width: 90%;
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Pulse</h1>
+    <p>Feel the rhythm of creativity.</p>
+  </header>
+
+  <section>
+    <h2>Welcome</h2>
+    <p>"Pulse" is a vibrant and animated web experience designed to catch the eye and engage the user. With dynamic motion, vivid gradients, and elegant glassmorphism, this template is perfect for projects that need to stand out.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Pulse Landing | Created with ❤️ and CSS animations
+  </footer>
+</body>
+</html>
